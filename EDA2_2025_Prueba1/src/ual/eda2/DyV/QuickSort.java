@@ -2,80 +2,81 @@ package ual.eda2.DyV;
 
 public class QuickSort {
 
-	// A utility function to swap two elements
-    public static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+	// Una función de utilidad para intercambiar dos elementos
+    public static void swap(int[] matriz, int i, int j) {
+        int temp = matriz[i];
+        matriz[i] = matriz[j];
+        matriz[j] = temp;
     }
  
-    /* This function takes last element as pivot, places
-       the pivot element at its correct position in sorted
-       array, and places all smaller (smaller than pivot)
-       to left of pivot and all greater elements to right
-       of pivot */
-    public static int partition(int[] arr, int low, int high) {
+    /* Esta función toma el último elemento como pivote, coloca
+     * el elemento pivote en su posición correcta en la matriz
+     * ordenada y coloca todos los elementos más pequeños 
+     * (más pequeños que el pivote) a la izquierda del pivote 
+     * y todos los elementos más grandes a la derecha
+     * del pivote. 
+     */
+    public static int partition(int[] matriz, int indiceInicial, int indiceFinal) {
  
-        // pivot
-        int pivot = arr[high];
+        // pivote
+        int pivot = matriz[indiceFinal];
  
-        // Index of smaller element and
-        // indicates the right position
-        // of pivot found so far
-        int i = (low - 1);
+        // Índice del elemento más pequeño e
+        // indica la posición correcta
+        // del pivote encontrado hasta el momento
+        int i = (indiceInicial - 1);
  
-        for (int j = low; j <= high - 1; j++) {
+        for (int j = indiceInicial; j <= indiceFinal - 1; j++) {
  
-            // If current element is smaller
-            // than the pivot
-            if (arr[j] < pivot) {
+        	// Si el elemento actual es más pequeño
+        	// que el pivote
+            if (matriz[j] < pivot) {
  
-                // Increment index of
-                // smaller element
+            	// Incrementar el índice del elemento más pequeño
                 i++;
-                swap(arr, i, j);
+                swap(matriz, i, j);
             }
         }
-        swap(arr, i + 1, high);
+        swap(matriz, i + 1, indiceFinal);
         return (i + 1);
     }
  
-    /* The main function that implements QuickSort
-              arr[] --> Array to be sorted,
-              low --> Starting index,
-              high --> Ending index
-     */
-    public static void quickSort(int[] arr, int low, int high) {
-        if (low < high) {
+    /* La función principal que implementa QuickSort
+    matriz[] --> Matriz a ordenar,
+    indiceInicial --> Índice inicial,
+    indiceFinal --> Índice final
+    */
+    public static void quickSort(int[] matriz, int indiceInicial, int indiceFinal) {
+        if (indiceInicial < indiceFinal) {
  
-            // pi is partitioning index, arr[p]
-            // is now at right place
-            int pi = partition(arr, low, high);
+        	// pi está particionado el índice, matriz[p]
+        	// ahora está en el lugar correcto
+            int pi = partition(matriz, indiceInicial, indiceFinal);
  
-            // Separately sort elements before
-            // partition and after partition
-            quickSort(arr, low, pi - 1);
-            quickSort(arr, pi + 1, high);
+			// Ordenar por separado los elementos antes
+			// de la partición y después de la partición
+            quickSort(matriz, indiceInicial, pi - 1);
+            quickSort(matriz, pi + 1, indiceFinal);
         }
     }
  
-    // Function to print an array
-    public static void printArray(int[] arr) {
-        for (int i = 0; i < arr.length; i++)
-            System.out.print(arr[i] + " ");
-        System.out.println();
+    // Función para imprimir una matriz
+    public static void printmatriz(int[] matriz) {
+        for (int i = 0; i < matriz.length; i++)
+            System.out.print(matriz[i] + " ");
+        	System.out.println();
     }
     
 	public static void main(String[] args) {
-		int arr[] = { 12, 11, 13, 5, 6, 7, 10, 4, 9, 15, 1 };
+		int matriz[] = { 12, 11, 13, 5, 6, 7, 10, 4, 9, 15, 1 };
 		  
-        System.out.println("Given Array");
-        printArray(arr);
+        System.out.println("Matriz dada");
+        printmatriz(matriz);
   
-        quickSort(arr, 0, arr.length - 1);
+        quickSort(matriz, 0, matriz.length - 1);
   
-        System.out.println("\nSorted array");
-        printArray(arr);
+        System.out.println("\nMatriz ordenada");
+        printmatriz(matriz);
 	}
 
 }
