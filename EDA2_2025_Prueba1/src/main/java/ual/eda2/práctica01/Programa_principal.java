@@ -61,7 +61,8 @@ public class Programa_principal {
             Par mejorFuerzaBruta = Algoritmos.AlgoritmoFuerzaBruta_V1(puntos.toArray(new Punto[0]));
             long fin = System.nanoTime();
             long tiempoTotal = fin - inicio;
-            System.out.println("Algoritmo Iterativo usando Fuerza Bruta:" + mejorFuerzaBruta);
+
+            System.out.println("\n\033[1mAlgoritmo Iterativo usando Fuerza Bruta:\033[0m " + mejorFuerzaBruta);
             System.out.println("Tiempo requerido para el algoritmo Iterativo usando Fuerza Bruta:" + (tiempoTotal/1000000000.0) + " segundos");
             
             
@@ -69,42 +70,42 @@ public class Programa_principal {
             Par mejorFuerzaBruta2 = Algoritmos.AlgoritmoFuerzaBruta_V2(puntos.toArray(new Punto[0]));
             fin = System.nanoTime();
             tiempoTotal = fin - inicio;
-            System.out.println("\nAlgoritmo Iterativo Mejorado usando Fuerza Bruta:" + mejorFuerzaBruta2);
+            System.out.println("\n\033[1mAlgoritmo Iterativo Mejorado usando Fuerza Bruta:\033[0m " + mejorFuerzaBruta2);
             System.out.println("Tiempo requerido para el algoritmo Iterativo Mejorado usando Fuerza Bruta: " + (tiempoTotal/1000000000.0) + " segundos");
             
             inicio = System.nanoTime();
             Par divideYVenceras_Version1 = Algoritmos.divideYVenceras_V1(puntos.toArray(new Punto[0]));
             fin = System.nanoTime();
             tiempoTotal = fin - inicio;
-            System.out.println("\nAlgoritmo Divide Y Vencerás version 1:" + divideYVenceras_Version1);
+            System.out.println("\n\033[1mAlgoritmo Divide Y Vencerás version 1:\033[0m " + divideYVenceras_Version1);
             System.out.println("Tiempo requerido para el algoritmo Divide y Vencerás version 1: " + (tiempoTotal/1000000000.0) + " segundos");
             
             inicio = System.nanoTime();
             Par divideYVenceras_Version2 = Algoritmos.divideYVenceras_V2(puntos.toArray(new Punto[0]));
             fin = System.nanoTime();
             tiempoTotal = fin - inicio;
-            System.out.println("\nAlgoritmo Divide Y Vencerás version 2:" + divideYVenceras_Version2);
+            System.out.println("\n\033[1mAlgoritmo Divide Y Vencerás version 2:\033[0m " + divideYVenceras_Version2);
             System.out.println("Tiempo requerido para el algoritmo Divide y Vencerás version 2: " + (tiempoTotal/1000000000.0) + " segundos");
             
             inicio = System.nanoTime();
             Par divideYVenceras_Version3 = Algoritmos.divideYVenceras_V3(puntos.toArray(new Punto[0]));
             fin = System.nanoTime();
             tiempoTotal = fin - inicio;
-            System.out.println("\nAlgoritmo Divide Y Vencerás version 3:" + divideYVenceras_Version3);
+            System.out.println("\n\033[1mAlgoritmo Divide Y Vencerás version 3:\033[0m " + divideYVenceras_Version3);
             System.out.println("Tiempo requerido para el algoritmo Divide y Vencerás version 3: " + (tiempoTotal/1000000000.0) + " segundos");
             
             inicio = System.nanoTime();
             Par divideYVenceras_Version4 = Algoritmos.divideYVenceras_V4(puntos.toArray(new Punto[0]));
             fin = System.nanoTime();
             tiempoTotal = fin - inicio;
-            System.out.println("\nAlgoritmo Divide Y Vencerás version 4:" + divideYVenceras_Version4);
+            System.out.println("\n\033[1mAlgoritmo Divide Y Vencerás version 4:\033[0m " + divideYVenceras_Version4);
             System.out.println("Tiempo requerido para el algoritmo Divide y Vencerás version 4: " + (tiempoTotal/1000000000.0) + " segundos");
             
             inicio = System.nanoTime();
             Par divideYVenceras_V5 = Algoritmos.divideYVenceras_V5(puntos.toArray(new Punto[0]));
             fin = System.nanoTime();
             tiempoTotal = fin - inicio;
-            System.out.println("\nAlgoritmo Divide Y Vencerás version 5:" + divideYVenceras_V5);
+            System.out.println("\n\033[1mAlgoritmo Divide Y Vencerás version 5:\033[0m " + divideYVenceras_V5);
             System.out.println("Tiempo requerido para el algoritmo Divide y Vencerás version 5: " + (tiempoTotal/1000000000.0) + " segundos");
         }
     }

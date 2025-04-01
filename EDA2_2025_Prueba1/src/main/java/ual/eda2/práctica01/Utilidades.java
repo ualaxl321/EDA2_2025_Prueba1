@@ -12,19 +12,19 @@ import java.util.Scanner;
 
 public class Utilidades {
 
+//    private static final String dir = System.getProperty("user.dir") + File.separator
+//            + "src" + File.separator
+//            + "ual" + File.separator
+//            + "eda2" + File.separator
+//            + "práctica01" + File.separator;
+
     private static final String dir = System.getProperty("user.dir") + File.separator
-            + "src" + File.separator
+    		+ "src" + File.separator
+            + "main" + File.separator
+            + "java" + File.separator
             + "ual" + File.separator
             + "eda2" + File.separator
             + "práctica01" + File.separator;
-
-//    private static final String dir = System.getProperty("user.dir") + File.separator
-//    		+ "src" + File.separator
-//            + "main" + File.separator
-//            + "java" + File.separator
-//            + "ual" + File.separator
-//            + "eda2" + File.separator
-//            + "practica01" + File.separator;
     
     public static double distancia_euclidea(Punto p1, Punto p2) {
         return Math.sqrt(Math.pow(p2.getx() - p1.getx(), 2) + Math.pow(p2.gety() - p1.gety(), 2));

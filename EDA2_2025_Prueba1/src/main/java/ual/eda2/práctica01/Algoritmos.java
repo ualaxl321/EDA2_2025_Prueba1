@@ -331,7 +331,7 @@ public class Algoritmos {
 		 * 	FinSi
 		 */
 		if (fin - inicio <= 3) {
-	        for (int i = inicio; i < fin; i++) {
+			for (int i = inicio; i < fin; i++) {
 	            for (int j = i + 1; j <= fin; j++) {
 	                double d = Utilidades.distancia_euclidea(puntos[i], puntos[j]);
 	                if (d < mejor.getDistancia()) mejor = new Par(puntos[i], puntos[j], d);
@@ -358,8 +358,11 @@ public class Algoritmos {
 		 *    mejor ← pd
 		 * FinSi
 		 */
-		if (pi.getDistancia() < pd.getDistancia()) mejor = pi;
-		mejor = pd;
+		if (pi.getDistancia() < pd.getDistancia()) {
+	        mejor = pi;
+	    } else {
+	        mejor = pd;
+	    }
 		
 		/* Construir franja central
 		 * franja ← array vacío de tamaño (fin - inicio + 1)
